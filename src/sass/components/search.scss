@@ -1,0 +1,90 @@
+////////////////////////////////////////
+// SEARCH
+.search {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 70rem;
+    align-items: center;
+    position: relative;
+    
+    &__show-items {
+        text-align: center;
+        color:$color-white;
+        margin-left: 10rem;
+        margin-top:1.5rem;
+        font-size:1.2rem;
+        &--pagination {
+            
+        }
+    }
+    
+    &__form {
+    //    flex: 0 0 40%;
+        width:0rem;
+        // display: flex;
+        align-items: center;
+        justify-content: center; 
+        position:absolute;
+        left:15rem;
+        top:-3rem;
+        overflow-x: hidden;
+        transform: translate(-5rem,-1rem);
+        transition: all .5s ease-in-out;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            order: 1;
+            flex: 0 0 100%;
+            background-color: $color-grey-light-2;
+        }
+        
+        &--input {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background-color: #cccccc;
+            border: none;
+            padding: 1.5rem 2rem;
+            border-radius: 100px;
+            width: 90%;
+            transition: all 0.2s;
+            margin-right: -3.25rem;
+    
+            &:focus {
+                outline: none;
+                width: 100%;
+                background-color: $color-grey-dark-2;
+            }
+    
+            &::-webkit-input-placeholder {
+                font-weight: 100;
+                color: $color-grey-dark;
+            }
+        }
+    
+        &--input:focus + &--button {
+            background-color: $color-grey-dark-2;
+        }
+    
+        &--button {
+            border: none;
+            background-color: $color-grey-dark-2;
+    
+            &:focus {
+                outline: none;
+            }
+    
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+    
+        &--icon {
+            height: 2rem;
+            width: 2rem;
+            fill: $color-grey-dark-2;
+        }
+    }
+  
+}

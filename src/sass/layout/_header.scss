@@ -1,0 +1,197 @@
+.qki-header-nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-content: center;
+    padding:1rem 2.5rem 1rem 2.5rem ;
+    color:$color-white;
+    
+    &__title {
+       font-size: 1.5rem; 
+    }
+    
+}
+.qki-header-nav-navbar {
+    width:60rem;
+    border: .5px solid rgba($color-white,.4);
+    margin: 0 10rem;
+    height:4rem;
+    overflow: hidden;
+    border-top-left-radius: 40em;
+    border-top-right-radius: 40em;
+    border-bottom-left-radius: 40em;
+    border-bottom-right-radius: 40em;
+    background-color: rgba($color-white,.3);
+    // display:flex;
+    // flex-direction: column;
+    // justify-content:space-between;
+
+
+    &__navbar-nav {
+    //    display:flex;
+    //    flex-direction: row;
+    //    list-style: none;
+    //    align-self: center;
+    //    justify-items: center;
+    //    justify-content: space-between;
+    //    font-size: 1.5rem;
+        padding:8px 0 0 0;
+        list-style: none;
+       
+       &--items {
+            &__link {
+                text-decoration: none;
+                color: $color-white;
+                padding: 14px 16px;
+                display:block;
+                text-align: center;
+                font-size: 17px;
+                float: left;
+                
+                &:hover,
+                &:hover {
+                    background-color: $color-white;
+                    color:$color-primary-green;
+                    border-top-left-radius: 5em;
+                    border-top-right-radius: 5em;
+                    border-bottom-left-radius: 5em;
+                    border-bottom-right-radius: 5em; 
+                }
+            }
+       }
+    }
+}
+.qki-header-searchbar {
+    margin: 1.5rem 10rem;
+    display: inline-block;
+    clear: both;
+    
+    &__show-items {
+        float: left;
+    }
+    &__searchbar-form {
+        float:right
+    }
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position:fiexd;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color:rgba($color-primary-green,.9);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: all 0.3s;
+    // display: none;
+    
+    & a {
+        padding:10px 10px 10px 30px;
+        text-decoration: none;
+        font-size:1.7rem;
+        color: $color-white;
+        display:block;
+        transition: all .3s;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-image: $linear-gradient;
+            color: $color-white;
+            transform: scaleY(0);
+            transition: transform .2s,
+                        width .4s cubic-bezier(1,0,0,1) .2s,
+                        background-color .1s,
+                        color .1s
+        }
+    
+        &:hover::before,
+        &--active::before {
+            transform: scaleY(1);
+            width: 100%;
+            color: $color-white;
+        }
+    
+        &:active::before {
+            background-image: $linear-gradient;
+            color: $color-white;
+        }
+       
+        // &:hover,
+        // &:focus {
+        //     background-image:$linear-gradient;
+        //     transition: .3s;
+        // }
+    
+    }
+}
+
+.side-menu-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    align-items: center;
+    margin-top: 4rem;
+    overflow-x: hidden;
+    
+    &--icon {
+        padding:1rem 2.4rem 1rem 2.5rem;
+        text-decoration: none;
+        font-size:1rem;
+        color: $color-grey-dark-2;
+        display:block;
+        transition: all .3s;
+        position: relative; 
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: $color-primary-green;
+            color: $color-white;
+            transform: scaleY(0);
+            transition: transform .2s,
+                        width .4s cubic-bezier(1,0,0,1) .2s,
+                        background-color .1s,
+                        color .1s
+        }
+    
+        &:hover::before,
+        &--active::before {
+            transform: scaleY(1);
+            width: 100%;
+            color: $color-white;
+        }
+    
+        &:active::before {
+            background-color: $color-primary-green;
+            color: $color-white;
+        }
+        
+        // &:hover,
+        // &:focus {
+        //     background-color:$color-primary-green;
+        //     transition: .3s;
+        //     color: $color-white;
+        // }
+    }
+}
+.navbar-menu {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
+

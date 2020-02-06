@@ -1,0 +1,65 @@
+.App-loader {
+    background-color: $color-white;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color:$color-grey-dark;
+    
+    
+    &__title {
+        color:$color-primary-green;
+        font-size:4.5rem;
+        font-weight:600;
+        position: relative;
+        top:-2rem;
+        padding-left:1rem;
+        
+        @include respond(tab-port) {
+            padding-left:1.5rem; 
+        }
+        
+        &::before {
+            content: url(../img/logo96.png);
+            position: absolute;
+            left: -10rem;
+            pointer-events: none;
+            
+            
+            @include respond(tab-port){
+                content: url(../img/logo64.png);
+            }
+        }
+        
+        &::after {
+            content:"healthcare QS";
+            width:50vmin;
+            text-transform: uppercase;
+            left:-9rem;
+            top: 6.5rem;
+            font-size:2rem;
+            display:block;
+            position: absolute;
+            font-weight:400;
+            padding-left:1rem;
+            
+            @include respond(tab-port) {
+                padding-left:1.6rem; 
+                font-size:1.5rem;
+            }
+        }
+    }
+
+}
+
+.Spinner {
+    pointer-events: none;
+    
+    @include logo(){
+        & {
+        animation: App-logo-spin infinite 5s ease-in-out;  
+        }
+    }
+}
