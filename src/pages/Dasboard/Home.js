@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styling/main.css';
 import Layout from '../../components/Layout/Layout'
+import '../../fontello/css/fontello.css';
 
 const Home = (props) => {
     const title = "Display all patients";
@@ -13,7 +14,7 @@ const Home = (props) => {
             openSearchInput={props.openSearchInput}
         >
            <div className="home">
-                <h1>Display Content </h1>
+                <h1 className="icon-user">Display Content </h1>
           
             </div> 
         </Layout>
