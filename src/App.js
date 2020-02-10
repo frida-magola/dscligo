@@ -33,14 +33,14 @@ class App extends React.Component {
       this.setState({text:"Fetching User..." });
       setTimeout(() => {
         //User found
-        resolve({
-          username:'mwalila', 
-          isUserFound:true,
-          isLogin:true
-        });
+        // resolve({
+        //   username:'mwalila', 
+        //   isUserFound:true,
+        //   isLogin:true
+        // });
         
         //not user found
-        // resolve(false);
+        resolve(false);
       },2000);
     })
       

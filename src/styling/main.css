@@ -498,4 +498,19 @@ body {
   }
 }
 
+.form-input {
+  margin: 50px 0px;
+  padding: 0px;
+  text-align: center;
+  align: center;
+  background: url("../img/logo.png");
+  background-size: contain;
+  background-position: top;
+  background: cover;
+}
+
+.form-label {
+  color: red;
+}
+
 /*# sourceMappingURL=main.css.map */
