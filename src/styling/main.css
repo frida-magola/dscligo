@@ -498,19 +498,86 @@ body {
   }
 }
 
-.form-input {
-  margin: 50px 0px;
-  padding: 0px;
+.login-container {
+  background-image: linear-gradient(to bottom, rgba(67, 172, 149, 0.42), rgba(67, 172, 149, 0.42)), url(".././img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border: 1px solid white;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.login-container__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40%;
+  height: 70vh;
   text-align: center;
-  align: center;
-  background: url("../img/logo.png");
-  background-size: contain;
-  background-position: top;
-  background: cover;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 0.6rem;
+  opacity: 0.89;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+.login-container__content .btn-login {
+  font-size: 16px;
+  font-weight: initial;
+  color: #f7f7f7;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  padding-left: 16.4rem;
+  padding-right: 16.4rem;
+  cursor: pointer;
+  border: 1px solid #43AC95;
+  background-color: #43AC95;
+}
+.login-container__content h1 {
+  color: #707070;
+  font-weight: initial;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+.login-container__content a {
+  position: relative;
+  margin-right: 25rem;
+  color: #DAC468;
+  font-weight: lighter;
+  font-size: 1.7rem;
+  text-decoration: none;
+  line-height: 3;
+}
+.login-container__content__logo {
+  width: 20rem;
+  margin: 1rem auto;
+}
+.login-container__content__logo img {
+  width: 100%;
 }
 
-.form-label {
-  color: red;
+.form-control {
+  text-align: left;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  padding-right: 20rem;
+  border: 1px solid #43AC95;
+  font-size: 1.6rem;
+  color: #707070;
+}
+
+input:focus {
+  outline: none;
+  color: #707070;
+}
+input:focus ::placeholder {
+  color: #eee;
+}
+input:focus ::-webkit-input-placeholder {
+  color: #cccccc;
 }
 
 /*# sourceMappingURL=main.css.map */
