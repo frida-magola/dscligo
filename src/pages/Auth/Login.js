@@ -1,32 +1,55 @@
 
 import React from "react";
 import '../../styling/main.css';
-import Input from '../../components/Inputs/Input';
+// import Input from '../../components/Inputs/Input';
 
-const login = () => {
-return (
-    <div className="form-input">
-      <form>
-        <p className="h4 text-center mb-4">Sign in</p>
-        <label htmlFor="defaultFormLoginEmailEx" className="form-label">
-          Your email
-        </label>
-        <input type="email" id="defaultFormLoginEmailEx" className="form-control" />
-        <br />
-        <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
-          Your password
-        </label>
-        <input type="password" id="defaultFormLoginPasswordEx" className="form-control" />
-        <div className="text-center mt-4">
-            <button>sing up</button>
+const logo_img = require ('../../img/logoxlg.png');
+
+
+const login = (props) => {
+    return (
+        <div className="login-container">
+            <div className="login-container__content">
+                <div className="login-container__content__logo">
+                    <img src={logo_img} alt="logo" />
+                </div> 
+                    <h1 className="sing-up">sign in</h1>
+                <form action="" method="post">
+                    <div className="form-group">
+                        <input 
+                            type="text" 
+                            className="form-control"  
+                            value=""
+                            placeholder="username"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <input 
+                            type="password"  
+                            className="form-control" 
+                            value=""
+                            placeholder="password"
+                        />
+                    </div>
+                    
+                    <div className="form-group">
+                        <button className="btn-login">Sign up</button>
+                    </div>
+                </form>
+                    <a href="google.com" className="forgot">forgot password?</a>
+            </div>
         </div>
-      </form>
-      </div>
-      
-);
+    
+        
+        
+    );
 };
 
 export default login;
+
+
+
 
 
 
